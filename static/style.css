@@ -1,0 +1,144 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Karla";
+* {
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  font-family:"Karla";
+}
+body {
+  height:100vh;
+  background: -webkit-linear-gradient(#eee 0%, #ddd 100%);
+}
+.login-form {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:300px;
+  height:340px;
+  background: #fff;
+  box-shadow: 0px 5px 80px 0px #e4e8f0;
+  overflow:hidden;
+}
+/* .login-form .backbtn {
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#d0d0d0;
+  width:25px;
+  height:25px;
+  text-align:center;
+  line-height:25px;
+  border-radius:50%;
+  color:#fff;
+  cursor:not-allowed;
+  transition:all 200ms ease;
+} */
+/* .login-form .backbtn.active {
+  background:#647ace;
+  cursor:pointer;
+} 
+ .login-form .backbtn.disabled {
+  background:#eee;
+}  */
+.login-form .line {
+  position:absolute;
+  top:60px;
+  text-align:center;
+  width:100%;
+  font-size:23px;
+  color:rgb(63, 63, 63);
+  font-family:"Karla";
+}
+.login-form .line div {
+  font-size:30px;
+  text-transform:uppercase;
+}
+.login-form .line p {
+  margin-top:15px;
+  font-size:20px;
+  color:#888;
+}
+.phases {
+  position:absolute;
+  top:160px;
+  height:200px;
+  width:200%;
+  left:0%;
+  transition:all 300ms ease;
+}
+.phases  div {
+  width:50%;
+  float:left;
+  display:flex;
+  flex-direction:column;
+  padding:0px 20px;
+}
+.phases div * {
+  margin:16px 0px;
+  font-size:15px;
+}
+.phases div input {
+  height:40px;
+  padding-left:5px;
+}
+.phases div input.error {
+  border-color:tomato;
+}
+.phases div button {
+  height:40px;
+  padding-left:5px;
+  color:#fff;
+  outline:none;
+  border:none;
+  border-radius:2px;
+  background:#196be8;
+  font-size:17px;
+  cursor:pointer;
+}
+.phases.next {
+  left:-100%;
+}
+.create {
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  text-align:center;
+}
+.create a {
+  text-decoration:none;
+  font-size:16px;
+  color:#196be8;
+}
+.loading {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:#fff;
+  display:none;
+  z-index:2;
+}
+.loading.show-it {
+  display:inline-block;
+}
+.loading:before {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(0deg);
+  width:50px;
+  height:50px;
+  border:5px solid #eee;
+  border-top-color:#196be8;
+  border-radius:50%;
+  animation:loading 900ms ease infinite;
+}
+@keyframes loading {
+  to {
+    transform:translate(-50%,-50%) rotate(360deg);
+  }
+}
